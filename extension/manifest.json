@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "COM360 Smart Search",
+  "version": "0.1.0",
+  "description": "Floating search bar for COM360. Type a request in plain English and jump straight to the right page.",
+  "host_permissions": ["http://localhost:5001/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://com360view.com/*"],
+      "js": ["pages.js", "content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
